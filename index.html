@@ -25,7 +25,8 @@
   <h1>💖 Buboo 💖💖💖💖💖💖 Will you be my Valentine? 💖</h1>
 
   <button onclick="showBalloons()">Yes</button>
-  <button onclick="alert('Oh no 😢')">No</button>
+  <button id="noBtn">No</button>
+
 
  <script>
 function showBalloons() {
@@ -79,6 +80,15 @@ function showLove() {
   }
 }
 </style>
+<script>
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", () => {
+  noBtn.style.position = "absolute";
+  noBtn.style.left = Math.random() * 80 + "vw";
+  noBtn.style.top = Math.random() * 80 + "vh";
+});
+</script>
 
 </body>
 </html>
