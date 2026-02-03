@@ -24,8 +24,35 @@
 
   <h1>💖 Buboo 💖💖💖💖💖💖 Will you be my Valentine? 💖</h1>
 
-  <button onclick="alert('Its a right choise you got most handsome man')">Yes</button>
+  <button onclick="showBalloons()">Yes</button>
   <button onclick="alert('Oh no 😢')">No</button>
+
+ <script>
+function showBalloons() {
+  for (let i = 0; i < 30; i++) {
+    let balloon = document.createElement("div");
+    balloon.innerHTML = "🎈";
+    balloon.style.position = "fixed";
+    balloon.style.left = Math.random() * 100 + "vw";
+    balloon.style.top = "-50px";
+    balloon.style.fontSize = "30px";
+    balloon.style.animation = "fall 3s linear";
+    document.body.appendChild(balloon);
+
+    setTimeout(() => {
+      balloon.remove();
+    }, 3000);
+  }
+}
+</script>
+
+<style>
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+</style>
 
 </body>
 </html>
